@@ -1,0 +1,219 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 15px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #ffe4ec, #fff0f5, #ffd6e2);
+    color: #743b50;
+    overflow-x: hidden;
+}
+
+.hearts {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #e99ab4;
+    font-size: 30px;
+    letter-spacing: 25px;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 520px;
+    padding: 38px 28px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid #ffffff;
+    border-radius: 28px;
+    box-shadow: 0 15px 45px rgba(176, 77, 111, 0.15);
+}
+
+.heart-icon {
+    font-size: 52px;
+    margin-bottom: 12px;
+    animation: heartbeat 1.5s infinite;
+}
+
+.subtitle {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: #c45c80;
+    margin-bottom: 14px;
+}
+
+h1 {
+    font-size: clamp(26px, 6vw, 36px);
+    line-height: 1.2;
+    color: #a63d63;
+    margin-bottom: 15px;
+}
+
+.description {
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 0 auto 28px;
+    max-width: 370px;
+}
+
+.countdown-section {
+    padding: 22px 12px;
+    background: #fff0f5;
+    border-radius: 20px;
+    margin-bottom: 28px;
+}
+
+.countdown-title {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.countdown {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.time-box {
+    min-width: 0;
+    padding: 14px 2px;
+    border-radius: 13px;
+    background: white;
+    box-shadow: 0 4px 12px rgba(176, 77, 111, 0.08);
+}
+
+.time-box span {
+    display: block;
+    font-size: clamp(21px, 5vw, 30px);
+    font-weight: bold;
+    color: #c04f79;
+    font-variant-numeric: tabular-nums;
+}
+
+.time-box small {
+    display: block;
+    margin-top: 5px;
+    font-size: 10px;
+    color: #956477;
+}
+
+.date-text {
+    margin-top: 17px;
+    font-size: 13px;
+    color: #b44e73;
+}
+
+form {
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #edc2d1;
+    border-radius: 12px;
+    outline: none;
+    background: #fffafd;
+    color: #743b50;
+    font-size: 15px;
+    margin-bottom: 14px;
+}
+
+input:focus {
+    border-color: #c04f79;
+    box-shadow: 0 0 0 3px #f9dce7;
+}
+
+button,
+.surprise-link {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #d85f89, #b83e6c);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+button:hover,
+.surprise-link:hover {
+    transform: translateY(-2px);
+    opacity: 0.92;
+}
+
+#message {
+    margin-top: 13px;
+    font-size: 14px;
+    text-align: center;
+}
+
+#success {
+    margin-top: 18px;
+    text-align: center;
+    line-height: 1.8;
+}
+
+#success p {
+    margin-bottom: 12px;
+}
+
+footer {
+    margin-top: 27px;
+    font-size: 11px;
+    color: #aa7a8d;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.12);
+    }
+}
+
+@media (max-width: 360px) {
+    .container {
+        padding: 28px 16px;
+    }
+
+    .countdown {
+        gap: 5px;
+    }
+
+    .time-box {
+        padding: 12px 1px;
+    }
+}

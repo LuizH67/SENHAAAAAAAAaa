@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uma surpresa para você ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="hearts" aria-hidden="true">♥ ♡ ♥ ♡ ♥</div>
+
+    <main class="container">
+        <div class="heart-icon">❤️</div>
+
+        <p class="subtitle">UMA SURPRESA ESPECIAL</p>
+
+        <h1>Tenho algo para você...</h1>
+
+        <p class="description">
+            Existe um segredinho esperando por você.
+            Mas, para descobrir, vai precisar da senha certa. 💌
+        </p>
+
+        <section class="countdown-section">
+            <p class="countdown-title">Nosso dia está chegando...</p>
+
+            <div id="countdown" class="countdown">
+                <div class="time-box">
+                    <span id="days">00</span>
+                    <small>Dias</small>
+                </div>
+
+                <div class="time-box">
+                    <span id="hours">00</span>
+                    <small>Horas</small>
+                </div>
+
+                <div class="time-box">
+                    <span id="minutes">00</span>
+                    <small>Minutos</small>
+                </div>
+
+                <div class="time-box">
+                    <span id="seconds">00</span>
+                    <small>Segundos</small>
+                </div>
+            </div>
+
+            <p class="date-text">♡ 31 de outubro de 2026 ♡</p>
+        </section>
+
+        <form id="passwordForm">
+            <label for="password">Qual é a senha secreta?</label>
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Digite a senha aqui..."
+                autocomplete="off"
+                required
+            >
+
+            <button type="submit" id="unlockButton">
+                Desbloquear minha surpresa 💗
+            </button>
+
+            <p id="message" aria-live="polite"></p>
+
+            <div id="success" hidden>
+                <p>Você conseguiu, meu amor! 🥹❤️</p>
+                <a href="https://luizh67.github.io/siteee/" class="surprise-link">
+                    Abrir minha surpresa 💌
+                </a>
+            </div>
+        </form>
+
+        <footer>Feito com muito amor, especialmente para ANA LIVIA. ♡</footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
